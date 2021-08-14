@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Les tâches</ion-title>
+    <ion-buttons slot="end">
+    <ion-button (click)="logout()">
+      <ion-icon name="exit-outline"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-list >
+        <ion-list-header>{{currentYear}}</ion-list-header>
+        <div *ngFor="let month of months">
+          <ion-item-divider *ngIf="month === currentMonth" color="secondary">
+            <ion-label>{{month}}</ion-label>
+          </ion-item-divider>
+          <ion-item-divider *ngIf="month != currentMonth">
+            <ion-label>{{month}}</ion-label>
+          </ion-item-divider>
+        </div>
+        
+      </ion-list>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="add" [routerLink]="['/home/task/addTask']"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+</ion-content>

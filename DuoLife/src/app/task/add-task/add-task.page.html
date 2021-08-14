@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['..']">
+        Retour
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button>
+        Valider
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Ajouter une tâche</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+      <ion-icon name="text-outline"></ion-icon>&nbsp;
+      <ion-input placeholder="Titre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="list-outline"></ion-icon>&nbsp;
+    <ion-textarea placeholder="Description"></ion-textarea>
+</ion-item>
+<ion-item>
+  <ion-label>Début</ion-label>
+  <ion-datetime 
+  [dayNames]="dayNames"
+  [dayShortNames]="dayShortNames"
+  [monthNames]="monthNames"
+  [monthShortNames]="monthShortNames"
+  [(ngModel)]="task.startDate"
+  doneText="Ok"
+  cancelText="Annuler"  min="2021" max="2100" displayFormat="DDD. DD MMMM YYYY HH:mm"></ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-label>Fin</ion-label>
+  <ion-datetime 
+  [dayNames]="dayNames"
+  [dayShortNames]="dayShortNames"
+  [monthNames]="monthNames"
+  [monthShortNames]="monthShortNames"
+  [(ngModel)]="task.endDate"
+  doneText="Ok"
+  cancelText="Annuler" min="2021" max="2100" displayFormat="DDD. DD MMMM YYYY HH:mm"></ion-datetime>
+</ion-item>
+</ion-content>
