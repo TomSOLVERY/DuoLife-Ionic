@@ -35,8 +35,8 @@ export class LocationPage implements OnInit {
 
   loadMap() {
     Environment.setEnv({
-      API_KEY_FOR_BROWSER_RELEASE: 'AIzaSyAr6b5_bHbG5C5_p6Tz1-TO5RW-vmq07dQ',
-      API_KEY_FOR_BROWSER_DEBUG: 'AIzaSyAr6b5_bHbG5C5_p6Tz1-TO5RW-vmq07dQ'
+      API_KEY_FOR_BROWSER_RELEASE: '***API KEY GOOGLE***',
+      API_KEY_FOR_BROWSER_DEBUG: '***API KEY GOOGLE***'
     });
     this.map = GoogleMaps.create('map_canvas', {
       camera: {
