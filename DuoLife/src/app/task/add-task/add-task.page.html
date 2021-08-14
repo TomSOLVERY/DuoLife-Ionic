@@ -46,4 +46,13 @@
   doneText="Ok"
   cancelText="Annuler" min="2021" max="2100" displayFormat="DDD. DD MMMM YYYY HH:mm"></ion-datetime>
 </ion-item>
+<ion-item>
+  <ion-icon name="location-outline"></ion-icon>&nbsp;
+  <ion-input placeholder="Localisation"></ion-input>
+  <ion-buttons slot="end">
+    <ion-button [routerLink]="['/home/task/addTask/location']">
+      Carte
+    </ion-button>
+  </ion-buttons>
+</ion-item>
 </ion-content>
