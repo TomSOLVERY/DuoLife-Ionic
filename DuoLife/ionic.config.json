@@ -1,0 +1,7 @@
+{
+  "name": "DuoLife",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
